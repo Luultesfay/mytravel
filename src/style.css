@@ -3,14 +3,16 @@
 }
 body {
   margin: 0;
-  background-color: #f8d1d1;
+  background-color: #918e9b;
 }
 
 .container {
   width: 550px;
-  height: 704px;
+  height: 780px;
   position: relative;
-  left: 20%;
+  left: 40%;
+  margin-top: 8rem;
+
   background-color: #ffffff;
   font-family: Inter;
 }
@@ -52,7 +54,7 @@ nav > h1 {
   font-size: 10px;
   line-height: 1px;
   letter-spacing: 1px;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 .h2 {
   font-size: 25px;
@@ -77,9 +79,11 @@ nav > h1 {
   line-height: 12px;
   text-decoration: underline;
   color: #918e9b;
-  margin-left: 2px;
+  margin-left: 8px;
   letter-spacing: 1px;
+  cursor: grab;
 }
+
 .pointer--logo {
   color: #f55a5a;
   width: 7px;

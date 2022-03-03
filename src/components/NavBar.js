@@ -1,38 +1,33 @@
-import WldLogo from "../images/worldlogo.png";
+//import WldLogo from "../images/worldlogo.png";
+
 import pointer from "../images/pointer.png";
-const NavBar = () => {
+const NavBar = (props) => {
+  console.log(props.googleMapsUrl);
   return (
     <div>
-      <nav>
-        <img src={WldLogo} alt="worldlego" className="world--logo" />
-        <h1>my travel journal.</h1>
-      </nav>
       <div className="cards">
         <div className="hero">
-          {
-            <img
-              className="place-img"
-              src="https://source.unsplash.com/WLxQvbMyfas"
-              alt="city"
-            />
-          }
+          <img className="place-img" src={props.imageUrl} alt="city" />
         </div>
         <div className="card">
           <div className="country">
             <img src={pointer} alt="pointerlogo" className="pointer--logo" />
             <p className="coutry--1">
-              JAPAN <span id="google-Map">View on Google Maps</span>
+              {props.location}
+              <span id="google-Map">
+                <a href={props.googleMapsUrl} target="_">
+                  View on Google Maps
+                </a>
+              </span>
             </p>
           </div>
 
           <div>
-            <h2>Mount Fuji</h2>
-            <p className="date">12 Jan, 2021 -24 Jan, 2021</p>
-            <p className="paragraph">
-              Mount Fuji is the tallest mountain in Japan, standing at 3,776
-              meters (12,380 feet). Mount Fuji is the single most popular
-              tourist site in Japan, for both Japanese and foreign tourists.
+            <h2>{props.title} </h2>
+            <p className="date">
+              {props.startDate} - {props.endDate}
             </p>
+            <p className="paragraph">{props.description}</p>
           </div>
         </div>
       </div>
@@ -40,6 +35,7 @@ const NavBar = () => {
   );
 };
 export default NavBar;
+
 // Photos from Unsplash
 // (can use these URLs as your img src)
 
@@ -51,3 +47,5 @@ export default NavBar;
 
 // Norway
 // https://source.unsplash.com/3PeSjpLVtLg
+//https://images.pexels.com/photos/1571746/pexels-photo-1571746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+//<a href="url">link text</a>
